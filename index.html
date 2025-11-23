@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-slate-100">
+    <div class="min-h-screen flex items-center justify-center p-4">
+        <div class="w-full max-w-md">
+            <!-- Card -->
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h1 class="text-3xl font-bold text-gray-800 mb-6">Welcome</h1>
+                
+                <!-- Input Section -->
+                <div class="space-y-4 mb-6">
+                    <input 
+                        type="text" 
+                        id="nameInput" 
+                        placeholder="Enter your name" 
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                    >
+                    <button 
+                        id="submitBtn" 
+                        class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-200 cursor-pointer"
+                    >
+                        Submit
+                    </button>
+                </div>
+
+                <!-- Output Section -->
+                <div id="output" class="hidden bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <p class="text-gray-700">Hello, <span id="nameDisplay" class="font-bold text-blue-600"></span>! 👋</p>
+                </div>
+
+                <!-- Counter Section -->
+                <div class="mt-8 pt-8 border-t border-gray-200">
+                    <p class="text-lg font-semibold text-gray-800 mb-4">Counter: <span id="counter" class="text-blue-600">0</span></p>
+                    <div class="flex gap-2">
+                        <button 
+                            id="decreaseBtn" 
+                            class="flex-1 bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg transition"
+                        >
+                            -
+                        </button>
+                        <button 
+                            id="increaseBtn" 
+                            class="flex-1 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition"
+                        >
+                            +
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Toggle Dark Mode -->
+                <div class="mt-8 pt-8 border-t border-gray-200">
+                    <button 
+                        id="themeToggle" 
+                        class="w-full bg-gray-800 hover:bg-gray-900 text-white font-semibold py-2 px-4 rounded-lg transition"
+                    >
+                        🌙 Dark Mode
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
